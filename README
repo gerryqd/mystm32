@@ -1,0 +1,10 @@
+README
+======
+
+A simple gcc based stm32f103 skeleton project.
+
+Demo board
+----------
+
+  A quite simple mini board with stm32f103c8t6
+
