@@ -8,3 +8,21 @@ Demo board
 
   A quite simple mini board with stm32f103c8t6
 
+
+Tools
+-----
+
+  stlink
+    
+    1. Erase the flash
+
+      st-flash erase
+
+    2. Program the flash
+
+      st-flash write demo.bin 0x8000000
+
+    3. GDB server
+
+      st-util
+
