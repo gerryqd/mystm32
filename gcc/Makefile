@@ -50,8 +50,6 @@ vpath %.s $(ROOT_PATH)/src/startup/
 ASRCS = startup_stm32f10x_md.s
 OBJS += $(ASRCS:.s=.o)
 
-
-
 all: $(APP_NAME).elf
 
 $(APP_NAME).elf: $(OBJS)
@@ -69,4 +67,5 @@ $(APP_NAME).elf: $(OBJS)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJS) $(OBJS:.o=.d) $(APP_NAME).* startup_stm32f* $(CLEANOTHER)
+#	rm -f $(OBJS) $(OBJS:.o=.d) $(APP_NAME).* startup_stm32f* $(CLEANOTHER)
+	rm -f *.o *.lst *.hex *.elf *.bin
