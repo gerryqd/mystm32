@@ -2,7 +2,7 @@
 
 //#include <stdint.h>
 
-
+// In the mini stm32f103c8t6 board,
 // PC13 is the LED
 
 void led_init(void)
@@ -12,7 +12,9 @@ void led_init(void)
   /* GPIOC Periph clock enable */
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_12;;
+  // 
+  GPIO_StructInit(&GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   GPIO_Init(GPIOC, &GPIO_InitStructure);
