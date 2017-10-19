@@ -67,6 +67,9 @@ $(APP_NAME).elf: $(OBJS)
 %.o: %.s
 	$(CC) -c $(CFLAGS) $< -o $@
 
+flash: $(APP_NAME).bin
+	st-flash write $(APP_NAME).bin 0x8000000
+
 clean:
 #	rm -f $(OBJS) $(OBJS:.o=.d) $(APP_NAME).* startup_stm32f* $(CLEANOTHER)
 	rm -f *.o *.lst *.hex *.elf *.bin
