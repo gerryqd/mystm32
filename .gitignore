@@ -1,0 +1,5 @@
+*.[ao]
+*.bin
+*.hex
+*.elf
+*.lst
