@@ -1,5 +1,5 @@
 # ============================================
-CROSS_COMPILE = arm-none-eabi
+CROSS_COMPILE = arm-unknown-eabi
 CC = $(CROSS_COMPILE)-gcc
 LD = $(CROSS_COMPILE)-gcc
 AR = $(CROSS_COMPILE)-ar
@@ -27,7 +27,7 @@ ASFLAGS = -g
 LDFLAGS += -T$(LDSCRIPT) -mthumb -mcpu=cortex-m3
 LDFLAGS += --specs=nosys.specs
 LDFLAGS += -Wl,--gc-sections 
-CFLAGS += -mcpu=cortex-m3 -mthumb -nostdlib # -nostartfiles
+CFLAGS += -mcpu=cortex-m3 -mthumb -nostdlib -nostartfiles
 CFLAGS += -I$(ROOT_PATH) -I$(DEVICE) -I$(CORE) -I$(PERIPH)/inc -I. -I../src/app
 CFLAGS += -D$(PTYPE) -DUSE_STDPERIPH_DRIVER $(FULLASSERT)
 
