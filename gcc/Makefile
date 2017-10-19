@@ -1,12 +1,13 @@
 # ============================================
-CC=arm-none-eabi-gcc
-LD=arm-none-eabi-gcc
-AR=arm-none-eabi-ar
-AS=arm-none-eabi-as
+CROSS_COMPILE = arm-none-eabi
+CC = $(CROSS_COMPILE)-gcc
+LD = $(CROSS_COMPILE)-gcc
+AR = $(CROSS_COMPILE)-ar
+AS = $(CROSS_COMPILE)-as
 
-OBJCOPY=arm-none-eabi-objcopy
-OBJDUMP=arm-none-eabi-objdump
-SIZE=arm-none-eabi-size
+OBJCOPY = $(CROSS_COMPILE)-objcopy
+OBJDUMP = $(CROSS_COMPILE)-objdump
+SIZE = $(CROSS_COMPILE)-size
 
 FULLASSERT = -DUSE_FULL_ASSERT
 
